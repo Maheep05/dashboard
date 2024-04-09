@@ -3,13 +3,10 @@ import { Navbar } from "../components/Navbar";
 import { PremiumCard } from "../components/PremiumCard";
 import { Sidenav } from "../components/Sidenav";
 import { Installedapps } from "./Installedapps";
-
-import * as React from 'react';
-import { LineChart } from '@mui/x-charts/LineChart';
-// import Performance from "../components/Performance";
+import { Performance } from "../components/Performance";
 export function Dashboard() {
 
-   
+
 
     const cardData = [{
         title: "Revenue",
@@ -45,8 +42,9 @@ export function Dashboard() {
                             <Card key={index} title={cData.title} data={cData.data} change={cData.change} lastChange={cData.lastChange} />
                         ))}
                     </div>
+                    <Performance />
                     <Installedapps />
-                   
+
                 </div>
             </div>
         </div>

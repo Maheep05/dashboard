@@ -1,4 +1,7 @@
 export function Card({ title, data, change, lastChange }) {
+
+    // custom color classes to avoid re writing lines of codes 
+    // if change < 0 then text will be red and if change = 0 then it will be grey and in the end it its not both then it will be green 
     const colorClass = change < 0 ? "text-[#DC3545] border-[#FFE0E3] bg-[#FFE0E3]" : change === 0 ? "text-[#5F6980] border-[#F2F4F7] bg-[#F2F4F7]" : "text-[#20C997] border-[#DCFFF5] bg-[#DCFFF5]";
 
     return (
@@ -9,6 +12,7 @@ export function Card({ title, data, change, lastChange }) {
             </div>
            
                 <div className="flex flex-row gap-4 items-center">
+                    {/* if there is no given data for change and last change then this should niot be displayed { specially for signups cards where only data is to be displayed} */}
                    {change !== undefined && <span className={`border-2 rounded-3xl px-2 text-xs ${colorClass}`}>{change}%</span>}
                     { lastChange !== 0 && <span className="font-semibold text-[#9D9FA1] text-xs">From {lastChange}%</span>}
                 </div>

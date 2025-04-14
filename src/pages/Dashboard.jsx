@@ -31,7 +31,7 @@ export function Dashboard() {
 
 
     return (
-        <div className="flex ">
+        <div className="flex">
             <Sidenav />
             <div className="w-full md:w-screen bg-[#f2f4f7]">
                 <Navbar />
